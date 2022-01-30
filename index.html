@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Психология</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
 </head>
 
 <body>
@@ -284,14 +285,12 @@
           </div>
           <div class="request__sale">
             <h4 class="request__sale-title">Информация <span>о скидках</span></h4>
-            <div class="request__sale-menu">
-              <select class="request__sale-select">
-                <option value="1">Скидка для студентов 1-х курсов</option>
-                <option value="2">Скидка для студентов 2-х курсов</option>
-                <option value="3">Скидка для студентов 3-х курсов</option>
-                <option value="4">Скидка для студентов 4-х курсов</option>
-              </select>
-            </div>
+            <select class="request__sale-select">
+              <option value="1">Скидка для студентов 1-х курсов</option>
+              <option value="2">Скидка для студентов 2-х курсов</option>
+              <option value="3">Скидка для студентов 3-х курсов</option>
+              <option value="4">Скидка для студентов 4-х курсов</option>
+            </select>
           </div>
           <div class="message">
             <h3 class="message__title">
@@ -303,7 +302,7 @@
                 <img class="message__popup-img" src="images/video-fon.png" alt="">
               </a>
             </div>
-            <button class="message__btn">Заполнить заявку на бесплатную 30 минутную
+            <button class="message__btn" data-modal-button="modal-1">Заполнить заявку на бесплатную 30 минутную
               ознакомительную встречу</button>
           </div>
         </div>
@@ -320,21 +319,21 @@
               <p class="consult__item-subtitle">Индивидуальная, 8 встреч</p>
               <p class="consult__item-duration">Длительность</p>
               <p class="consult__item-time">от 1 часа</p>
-              <button class="consult__item-btn">5 000 руб.</button>
+              <button class="consult__item-btn" data-modal-button="modal-1">5 000 руб.</button>
             </div>
             <div class="consult__item">
               <h5 class="consult__item-title">7 Коуч-сессиий</h5>
               <p class="consult__item-subtitle">Индивидуальная и групповая</p>
               <p class="consult__item-duration">Длительность</p>
               <p class="consult__item-time">от 1 до 1.5 часов</p>
-              <button class="consult__item-btn">30 000 руб.</button>
+              <button class="consult__item-btn" data-modal-button="modal-1">30 000 руб.</button>
             </div>
             <div class="consult__item">
               <h5 class="consult__item-title">Тренинг</h5>
               <p class="consult__item-subtitle">Индивидуальный и групповой</p>
               <p class="consult__item-duration">Длительность</p>
               <p class="consult__item-time">1 день (8 часов)</p>
-              <button class="consult__item-btn">80 000 руб.</button>
+              <button class="consult__item-btn" data-modal-button="modal-1">80 000 руб.</button>
             </div>
           </div>
           <p class="consult__subtitle">Доступны он-лайн и офф-лайн форматы</p>
@@ -375,7 +374,7 @@
               <div class="technics__top-man"></div>
             </div>
             <h3 class="technics__title-bottom"><span>Результаты,</span>которые
-            вы получите
+              вы получите
             </h3>
             <div class="technics__bottom">
               <div class="technics__bottom-woman"></div>
@@ -403,11 +402,44 @@
                 </li>
               </ul>
             </div>
-            <button class="technics__btn">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</button>
+            <button class="technics__btn" data-modal-button="modal-1">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</button>
           </div>
         </div>
       </section>
     </main>
+  </div>
+  <div class="overlay hidden" data-modal id="modal-1">
+    <div class="modal modal__window">
+      <div class="modal__close" data-modal-close>
+        <img class="modal__close-img" src="images/close.png" alt="">
+      </div>
+      <form class="modal__form" action="#">
+        <label class="modal__form-label">
+          Ваше имя
+          <span>*</span>
+        </label>
+        <input class="modal__form-input" type="text" placeholder="Ваше имя">
+        <label class="modal__form-label">
+          Номер телефона
+          <span>*</span>
+        </label>
+        <input class="modal__form-input" type="tel:" placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _">
+        <label class="modal__form-label">
+          Ваш E-mail
+        </label>
+        <input class="modal__form-input" type="email" placeholder="Ваш E-mail">
+        <div class="modal__form-menu">
+          <select class="modal__form-select">
+            <option value="1">Программа:</option>
+            <option value="2">Super-jump</option>
+            <option value="3">Астрология</option>
+            <option value="4">Психология</option>
+            <option value="4">Кросс-функциональность</option>
+          </select>
+        </div>
+        <button class="modal__form-btn">Отправить</button>
+      </form>
+    </div>
   </div>
   <footer class="footer">
     <div class="container">
